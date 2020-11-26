@@ -30,17 +30,5 @@ public class ExampleResource {
         return qs.getData(1L);
     }
 
-    @GET
-    @Path("/data")
-    @Produces(MediaType.APPLICATION_JSON)
-    public List<QuarkusData> getAllDataFromService() {
-        return qs.getAllData();
-    }
 
-    @GET
-    @Path("/data/{id}")
-    @Produces(MediaType.APPLICATION_JSON)
-    public QuarkusData getDataFromService(@PathParam("id") long id) {
-        return qs.getData(id);
-    }
 }
